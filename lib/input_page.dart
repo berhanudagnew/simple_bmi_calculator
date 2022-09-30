@@ -14,6 +14,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender? selected_gender;
   int height = 180;
+  int weigt = 60;
+  int age = 19;
 
   @override
   Widget build(BuildContext context) {
@@ -118,12 +120,85 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                   child: ReusableCard(
                 card_color: k_active_card_color,
+                card_child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'WEIGHT',
+                      style: k_lable_txt_style,
+                    ),
+                    Text(
+                      weigt.toString(),
+                      style: k_number_text_style,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RoundIconButton(
+                          onPressed: () {
+                            setState(() {
+                              weigt--;
+                            });
+                          },
+                          icon: FontAwesomeIcons.minus,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        RoundIconButton(
+                          onPressed: () {
+                            setState(() {
+                              weigt++;
+                            });
+                          },
+                          icon: FontAwesomeIcons.plus,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               )),
               Expanded(
-                child: ReusableCard(
-                  card_color: k_active_card_color,
+                  child: ReusableCard(
+                card_color: k_active_card_color,
+                card_child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'AGE',
+                      style: k_lable_txt_style,
+                    ),
+                    Text(
+                      age.toString(),
+                      style: k_number_text_style,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RoundIconButton(
+                          onPressed: () {
+                            setState(() {
+                              age--;
+                            });
+                          },
+                          icon: FontAwesomeIcons.minus,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        RoundIconButton(
+                          onPressed: () {
+                            setState(() {
+                              age++;
+                            });
+                          },
+                          icon: FontAwesomeIcons.plus,
+                        ),
+                      ],
+                    )
+                  ],
                 ),
-              ),
+              )),
             ],
           )),
           Container(
@@ -134,6 +209,26 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class RoundIconButton extends StatelessWidget {
+  RoundIconButton({required this.icon, required this.onPressed});
+  final IconData icon;
+  final VoidCallback onPressed;
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      child: Icon(icon),
+      elevation: 6.0,
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0,
+      ),
+      onPressed: onPressed,
+      shape: CircleBorder(),
+      fillColor: Color(0xFF4C4F5E),
     );
   }
 }
