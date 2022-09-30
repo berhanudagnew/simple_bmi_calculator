@@ -207,13 +207,8 @@ class _InputPageState extends State<InputPage> {
             },
             child: Container(
               alignment: Alignment.center,
-              child: Text(
-                'CALCULATE',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
-                    fontSize: 25.0),
-              ),
+              child: Text('CALCULATE', style: k_large_button_text_sstyle),
+              padding: EdgeInsets.only(bottom: 20.0),
               color: k_bottom_container_color,
               height: k_bottom_container_height,
               width: double.infinity,

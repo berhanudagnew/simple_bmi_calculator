@@ -14,3 +14,10 @@ const k_number_text_style = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
 );
+
+const k_large_button_text_sstyle =
+    TextStyle(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 25.0);
+const k_title_text_style = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
