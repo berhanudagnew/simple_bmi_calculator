@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constant.dart';
+import 'package:simple_bmi_calculator/constant.dart';
 
 class ReusableIcon extends StatelessWidget {
   ReusableIcon({required this.gender_icon, required this.gender_text});

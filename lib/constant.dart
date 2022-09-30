@@ -21,3 +21,18 @@ const k_title_text_style = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.bold,
 );
+
+const k_result_text_style = TextStyle(
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+  color: Color(0xFF24D876),
+);
+
+const k_bmi_text_style = TextStyle(
+  fontSize: 100.0,
+  fontWeight: FontWeight.bold,
+);
+
+const k_body_text_style = TextStyle(
+  fontSize: 22.0,
+);
